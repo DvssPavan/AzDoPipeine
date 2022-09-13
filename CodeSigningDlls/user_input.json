@@ -1,0 +1,27 @@
+{
+    "inBambooConfigs": {
+        "inProjectKey":"SGPOOMEM",
+        "inDriverLabel":"Marketo_ODBC_1.6.43.1019",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.43.1048",
+        "inSENLabel":"SimbaEngineSDK_10.1.23.1193",
+        "inDriverBrand": "Microsoft",
+        "inBuildConfigs":{
+            "Windows":{
+                "inCompiler":"vs2015",
+                "inPlatform":"w2012r2",
+                "inConfiguration":"zip"
+            },
+            "Linux":{
+                "inCompiler":"",
+                "inPlatform":"",
+                "inConfiguration":""
+            },
+            "OSX":{
+                "inCompiler":"",
+                "inPlatform":"",
+                "inConfiguration":""
+            }
+        },
+        "inBranchName": "Marketo 1.6"
+    }
+}
