@@ -1,0 +1,9 @@
+{
+    "inBambooConfigs": {
+        "inDriverLabel":"Marketo_ODBC_1.6.43.1019",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.43.1048",
+        "inSENLabel":"SimbaEngineSDK_10.1.23.1193",
+        "inBranchName": "Marketo 1.6"
+    },
+    "ExcludeCompilation": true
+}
