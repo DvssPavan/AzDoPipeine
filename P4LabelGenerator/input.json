@@ -1,0 +1,37 @@
+{
+    "dependencies":{
+        "common": {
+            "//Drivers/Memphis/Tools/...": ["head"],
+            "//Drivers/DriverShared/DriverSupport/Maintenance/10.1/...": ["head"],
+            "//Drivers/DriverShared/SENPluginToolkit/Maintenance/10.1/...": ["head"],
+            "//Drivers/DriverShared/ViewSupport/Maintenance/10.1/...": ["head"],
+            "//SimbaShared/Licensing/...": ["{SENLBL}"],
+            "//SimbaShared/Step/...": ["{SENLBL}"],
+            "//SimbaShared/Tools/...": ["{SENLBL}"],
+            "//Drivers/DriverShared/DriverOAuthSupport/Maintenance/10.1/...": ["head"],
+            "//ThirdParty/Expat/2.4.6/...": ["head"],
+            "//ThirdParty/icu/58.3.x/...": ["head"],
+            "//ThirdParty/libcURL/7.84.0_ssl1.1.1_zlib-static1.2.11_threaded_resolver/...": ["head"],
+            "//ThirdParty/libcURL/7.84.0_ssl1.1.1_zlib1.2.11_threaded_resolver/...": ["head"],
+            "//ThirdParty/openssl/1.1.1/...": ["head"],
+            "//ThirdParty/pcre/8.37/...": ["head"],
+            "//ThirdParty/poco/1.9.0/...": ["head"],
+            "//ThirdParty/pugixml/1.7/...": ["head"],
+            "//ThirdParty/rapidjson/20160518/...": ["head"],
+            "//ThirdParty/zlib/1.2.11/...": ["head"],
+            "//ThirdParty/liboauthcpp/1.0/...": ["head"]
+        },
+        "core": {
+            "//Drivers/Memphis/Core/Maintenance/1.6/...": ["head"],
+            "//Drivers/Memphis/Core/Trunk/Main/...": ["head"]
+        },
+        "plugin": {
+            "//Drivers/Memphis/Core/Maintenance/1.6/...": ["{CORELBL}"],
+            "//Drivers/Memphis/Core/Trunk/Main/...": ["{CORELBL}"],
+            "//SimbaShared/ImportDependencies/Maintenance/1.0/...": ["head"],
+            "//Drivers/DriverShared/Docs/External/...": ["head"],
+            "//Drivers/Memphis/DataSources/{DRV}/Common/Maintenance/1.6/...": ["head"],
+            "//Drivers/Memphis/DataSources/{DRV}/ODBC/Maintenance/1.6/...": ["head"]
+        }
+    }
+}
