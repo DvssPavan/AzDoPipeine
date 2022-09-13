@@ -1,0 +1,26 @@
+{
+    "RemoteMachineAddress": "***",
+    "Core": {
+        "SourcePath": "\\\\vmware-host\\Shared Folders\\builds\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Core_w2012r2_vs2015_64.zip",
+        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.44.1050",
+        "ForceUpdate": false,
+        "Branch": "Maintenance\\1.6"
+    },
+    "Plugin": {
+        "Compile": [
+            {
+                "SourcePath": "\\\\vmware-host\\Shared Folders\\builds\\Drivers\\MemphisODBC\\DataSources\\Eloqua\\1.6\\compile\\Eloqua_ODBC_1.6.44.1019_CORE_Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Marketo_w2012r2_vs2015_64.zip",
+                "DestPath": "C:\\Memphis_ODBC\\Marketo\\Eloqua_ODBC_1.6.44.1019_64Bit",
+                "ForceUpdate": false,
+                "Brand": "***",
+                "WaitForUserToSetupDSN": false,
+                "DataSourceConfiguration": {
+                    "Description": "Microsoft Eloqua DSN",                    
+		    "Dsn": "Microsoft Marketo"
+                },
+		"MetadataTesterPath": "C:\\Users\\fparmar\\Desktop\\Eloqua\\MetaTester\\bin\\x64\\Debug",
+		"inDriverBit": 64
+            }
+        ]
+    }
+}
