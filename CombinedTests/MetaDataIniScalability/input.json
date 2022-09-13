@@ -1,0 +1,40 @@
+{
+    "RemoteMachineAddress": "van-wnt-vm.simba.ad",
+    "Core": {
+        "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\Memphis_Core_ODBC_1.6.43.1048_SEN_SimbaEngineSDK_10.1.23.1193\\Core_w2012r2_vs2015_64.zip",
+        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.43.1048",
+        "ForceUpdate": true,
+        "Branch": "Maintenance\\1.6"
+    },
+    "Plugin": {
+        "Compile": [
+            {
+                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\\Marketo\\1.6\\compile\\Marketo_ODBC_1.6.43.1019_CORE_Memphis_Core_ODBC_1.6.43.1048_SEN_SimbaEngineSDK_10.1.23.1193\\Marketo_w2012r2_vs2015_64.zip",
+                "DestPath": "C:\\Memphis_ODBC\\Marketo\\Marketo_ODBC_1.6.43.1019_64Bit",
+                "ForceUpdate": false,
+                "Brand": "Microsoft",
+                "WaitForUserToSetupDSN": false,
+                "DataSourceConfiguration": {
+                    "Description": "Microsoft Marketo DSN",
+                    "Driver": "Microsoft Marketo ODBC Driver",
+                    "Auth_Client_Id": "79ebf880-0f8d-4646-ac43-054716662fee",
+                    "Auth_Type": "OAuth_2.0",
+                    "Auth_Scope": "contacts+social+reports+content+forms+automation+files+business-intelligence+integration-sync",
+                    "EncAccessToken": "",
+                    "EncClientSecret": "985FAAA77D031D8652E845552D7F3F17D03A5852F441A0385516B7F5C5A1A3AB685445845A0B72E77EE2D9EA23052A45",
+                    "Host": "747-AIC-046.mktorest.com",
+                    "UseWindowsProxySettings": "0",
+                    "EnableDoubleBuffer": "1",
+                    "UseHostVerification": "0",
+                    "UsePeerVerification": "0",
+                    "Auth_Expires": "",
+                    "DSNSETUP": "1",
+                    "ENABLESESSIONTOKEN": "0",
+                    "ENCREFRESHTOKEN": "",
+                    "USEEC2INST": "0",
+                    "UseEncryptedEndpoints": "1"
+                }
+            }
+        ]
+    }
+}

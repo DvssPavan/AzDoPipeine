@@ -1,0 +1,40 @@
+{
+    "RemoteMachineAddress": "van-wnt-vm.simba.ad",
+    "Core": {
+        "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\Memphis_Core_ODBC_1.6.43.1048_SEN_SimbaEngineSDK_10.1.23.1193\\Core_w2012r2_vs2015_64.zip",
+        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.43.1048",
+        "ForceUpdate": true,
+        "Branch": "Maintenance\\1.6"
+    },
+    "Plugin": {
+        "Compile": [
+            {
+                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\Eloqua\\1.6\\compile\\Eloqua_ODBC_1.6.44.1019_CORE_Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Eloqua_w2012r2_vs2015_64.zip",
+                "DestPath": "C:\\Memphis_ODBC\\Eloqua\\Eloqua_ODBC_1.6.44.1019_64Bit",
+                "ForceUpdate": false,
+                "Brand": "Microsoft",
+                "WaitForUserToSetupDSN": false,
+                "DataSourceConfiguration": {
+                    "Description": "Microsoft ELoqua DSN",
+                    "Driver": "Microsoft Eloqua ODBC Driver",
+                    "Auth_Type": "Basic",
+                    "UID" : "TechnologyPartnerSimbaTechnologiesInc\Jerry.Toledo",
+                    "ENCPWD" : "4CCB730023D95DEC47923DC02BCABF19",
+                    "EncAccessToken": "",
+                    "EncClientSecret": "",
+                    "Host": "secure.p02.eloqua.com",
+                    "UseWindowsProxySettings": "0",
+                    "EnableDoubleBuffer": "1",
+                    "UseHostVerification": "0",
+                    "UsePeerVerification": "0",
+                    "Auth_Expires": "",
+                    "DSNSETUP": "1",
+                    "ENABLESESSIONTOKEN": "0",
+                    "ENCREFRESHTOKEN": "",
+                    "USEEC2INST": "0",
+                    "UseEncryptedEndpoints": "1"
+                }
+            }
+        ]
+    }
+}
