@@ -1,0 +1,11 @@
+{
+    "ScalabilityTestConfig" : {
+        "ThreadCount": 30,
+        "TestTimeInSeconds": 3400,
+        "NumberOfQueries": 1,
+        "ConnectionConfig" : {
+            "ConnString": "dsn=Microsoft Hubspot;ProxyHost=localhost;ProxyPort=8888",
+            "provided": false
+        }
+    }
+}
