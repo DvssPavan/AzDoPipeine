@@ -244,7 +244,7 @@ def run_bamboo_adapter_build(input_args: dict):
 
 def main():
     # sys.argv[1] is current working directory
-    input_json_file = sys.argv[1] + '\\user_input.json'
+    input_json_file = sys.argv[1] + '\\' + sys.argv[7]
     if not os.path.exists(input_json_file):
         print("IMPORTANT: Please ensure to modify user_input.json as per your "
               "needs prior to running this.")
