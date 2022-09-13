@@ -1,0 +1,20 @@
+{
+    "inBambooConfigs": {
+        "inProjectKey":["TSTFOMEM"],
+        "inDriverLabel":"Marketo_ODBC_1.6.43.1019",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.43.1048",
+        "inSENLabel":"SimbaEngineSDK_10.1.23.1193",
+        "inDriverBrand":"Simba",
+        "inBooster_Label":"",
+        "inDisableParentMatch": "",
+        "inMemoryTest": "",
+        "inRetail": "",
+        "inAppVerifier": "",
+        "inTestSuiteList": "",
+        "inBuildConfigs": ["w2012r2 x64 64"],
+        "inBranchName": "Marketo 1.6",
+        "inCompiler": "vs2015",
+        "inInsightDesktopLabel": "",
+        "inInsightBranch": ""
+    }
+}
