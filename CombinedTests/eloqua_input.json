@@ -16,5 +16,6 @@
         "inCompiler": "vs2015",
         "inInsightDesktopLabel": "",
         "inInsightBranch": ""
-    }
+    },
+    "ExcludeCompilation": true
 }
