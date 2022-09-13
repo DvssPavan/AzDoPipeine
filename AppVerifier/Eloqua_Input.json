@@ -1,0 +1,10 @@
+{
+    "inBambooConfigs": {
+        "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.44.1050",
+        "inSENLabel":"SimbaEngineSDK_10.1.24.1196",
+        "inBranchName": "ELoqua 1.6",
+        "inTestSuiteList": ""
+    },
+    "ExcludeCompilation": true
+}
