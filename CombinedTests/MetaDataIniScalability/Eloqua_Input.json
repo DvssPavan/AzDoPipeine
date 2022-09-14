@@ -18,7 +18,7 @@
                     "Description": "Microsoft ELoqua DSN",
                     "Driver": "Microsoft Eloqua ODBC Driver",
                     "Auth_Type": "Basic",
-                    "UID" : "TechnologyPartnerSimbaTechnologiesInc\Jerry.Toledo",
+                    "UID" : "TechnologyPartnerSimbaTechnologiesInc\\Jerry.Toledo",
                     "ENCPWD" : "4CCB730023D95DEC47923DC02BCABF19",
                     "EncAccessToken": "",
                     "EncClientSecret": "",
