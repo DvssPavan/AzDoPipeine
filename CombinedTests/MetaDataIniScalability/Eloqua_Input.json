@@ -9,7 +9,7 @@
     "Plugin": {
         "Compile": [
             {
-                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\Eloqua\\1.6\\compile\\Eloqua_ODBC_1.6.44.1019_CORE_Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Eloqua_w2012r2_vs2015_64.zip",
+                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\\Eloqua\\1.6\\compile\\Eloqua_ODBC_1.6.44.1019_CORE_Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Eloqua_w2012r2_vs2015_64.zip",
                 "DestPath": "C:\\Memphis_ODBC\\Eloqua\\Eloqua_ODBC_1.6.44.1019_64Bit",
                 "ForceUpdate": false,
                 "Brand": "Microsoft",
