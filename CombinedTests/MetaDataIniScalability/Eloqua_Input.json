@@ -2,7 +2,7 @@
     "RemoteMachineAddress": "van-wnt-vm.simba.ad",
     "Core": {
         "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Core_w2012r2_vs2015_64.zip",
-        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.43.1048",
+        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.44.1050",
         "ForceUpdate": true,
         "Branch": "Maintenance\\1.6"
     },
