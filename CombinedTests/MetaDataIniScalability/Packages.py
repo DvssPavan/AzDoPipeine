@@ -39,7 +39,7 @@ class Package(ABC):
         return int(self.__mFileName[-6:-4])
 
     def shouldForceUpdate(self):
-        return self.__mForceUpdate
+        self.__mForceUpdate
 
     def download(self):
         source = self.getSourcePath()
