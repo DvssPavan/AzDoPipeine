@@ -25,6 +25,9 @@ class Package(ABC):
 
     def getDestinationPath(self):
         return os.path.abspath(self.__mDestinationPath)
+    
+    def setDestinationPath(self , inDestinationPath : str):
+        return self.__mDestinationPath = inDestinationPath
 
     def getFileName(self):
         return self.__mFileName
@@ -197,6 +200,7 @@ class Plugin(Package):
             print(extractedCorePath)
             pluginFileName = self.getFileName()
             extractedPluginPath=os.path.join(extractedPluginPath, pluginFileName[:len(pluginFileName)-4])
+            self.setDestinationPath(extractedPluginPath)
             print("Extracted Plugin Path "+extractedPluginPath)
             pluginLibFolderPath = os.path.join(extractedPluginPath, 'lib')
             
