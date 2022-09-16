@@ -27,7 +27,7 @@ class Package(ABC):
         return os.path.abspath(self.__mDestinationPath)
     
     def setDestinationPath(self , inDestinationPath : str):
-        return self.__mDestinationPath = inDestinationPath
+        self.__mDestinationPath = inDestinationPath
 
     def getFileName(self):
         return self.__mFileName
@@ -39,7 +39,7 @@ class Package(ABC):
         return int(self.__mFileName[-6:-4])
 
     def shouldForceUpdate(self):
-        self.__mForceUpdate
+        return self.__mForceUpdate
 
     def download(self):
         source = self.getSourcePath()
