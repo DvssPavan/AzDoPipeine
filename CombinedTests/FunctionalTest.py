@@ -254,6 +254,9 @@ class FTPlans:
 
         # For summary
         for fn in zip.namelist():
+            field = ""
+            summary = ""
+            final_summary = ""
             if fn.endswith("set_summary.csv"):
 
                 all_summary = open(filename, "w+")
@@ -266,9 +269,6 @@ class FTPlans:
                         print(row)
                         csv_list.append(row)
                     print(csv_list)
-                    field = ""
-                    summary = ""
-                    final_summary = ""
                     if(len(csv_list)):
                         field = csv_list[0][1:]
                         summary = csv_list[-1][1:]
