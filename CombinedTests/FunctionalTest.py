@@ -51,6 +51,7 @@ class FTPlans:
         self.outlook_password = outlook_password
         self.receiver_email = email
         self.shared_folder_path = shared_folder_path
+        self.isExcludeCompilation = input_args['ExcludeCompilation']
 
     def build(self):
 
@@ -62,47 +63,48 @@ class FTPlans:
         bamboo = Bamboo(url=bamboo_url, username=self.atlassian_user, password=self.atlassian_password)
 
         for x in range(len(self.build_configs)):
-            project = self.projects[x]
-            url = self.get_project_url(base_64_val, project)
-            print(url)
-            if not url == None:
-                if len(self.build_configs[x]) > 2:
-                    branch_info = bamboo.get_branch_info(
-                        self.get_plan_key(url, base_64_val, self.build_configs[x]),
-                        self.branch_name)
-                    branch_key = branch_info['key']
-                    bamboo.execute_build(branch_key, **self.get_params())
-                    print('Bamboo build is started for ' + str(self.build_configs[x]) +
-                          ' agent of ' + self.branch_name.split(' ')[0])
-                    final_url, current_job_id = self.active_plan(branch_info['latestResult']['link']['href'], base_64_val)
+            if(self.project[x] == "BULDOMEM" and !self.isExcludeCompilation) :
+                project = self.projects[x]
+                url = self.get_project_url(base_64_val, project)
+                print(url)
+                if not url == None:
+                    if len(self.build_configs[x]) > 2:
+                        branch_info = bamboo.get_branch_info(
+                            self.get_plan_key(url, base_64_val, self.build_configs[x]),
+                            self.branch_name)
+                        branch_key = branch_info['key']
+                        bamboo.execute_build(branch_key, **self.get_params())
+                        print('Bamboo build is started for ' + str(self.build_configs[x]) +
+                              ' agent of ' + self.branch_name.split(' ')[0])
+                        final_url, current_job_id = self.active_plan(branch_info['latestResult']['link']['href'], base_64_val)
 
-                status = self.status_of_agent(final_url)
-                if status == True or project[:3] == "TST":
-                    # As Binscope test is a part of Compile plan for only `Windows` platform
-                    # Logs Verification for Binscope should be done if and only if given Project Key is for Compile Plan and
-                    # Platform is `Windows`
-                    if status and project == 'BULDOMEM' and branch_info['shortKey'].startswith('WIN'):
-                        self.verify_binscope_log(branch_key, current_job_id, bamboo_url)
+                    status = self.status_of_agent(final_url)
+                    if status == True or project[:3] == "TST":
+                        # As Binscope test is a part of Compile plan for only `Windows` platform
+                        # Logs Verification for Binscope should be done if and only if given Project Key is for Compile Plan and
+                        # Platform is `Windows`
+                        if status and project == 'BULDOMEM' and branch_info['shortKey'].startswith('WIN'):
+                            self.verify_binscope_log(branch_key, current_job_id, bamboo_url)
 
-                    # Generate logs if plan is FT
-                    if project == "TSTFOMEM":
-                        data = urllib.request.urlopen(
-                            final_url.replace('rest/api/latest/result', 'browse')
-                            + "/artifact/JOB/Logs/build.txt")
+                        # Generate logs if plan is FT
+                        if project == "TSTFOMEM":
+                            data = urllib.request.urlopen(
+                                final_url.replace('rest/api/latest/result', 'browse')
+                                + "/artifact/JOB/Logs/build.txt")
 
-                        path = data.readlines()[1].strip().decode('utf-8')
-                        path = path.replace('oak', 'oak.simba.ad')
-                        self.get_logs(path)
+                            path = data.readlines()[1].strip().decode('utf-8')
+                            path = path.replace('oak', 'oak.simba.ad')
+                            self.get_logs(path)
+                    else:
+                        print(self.build_configs[x] + ' agent is failed.')
+                        return False
+
+                    if self.build_configs[x] == self.build_configs[-1]:
+                        return True
+
                 else:
-                    print(self.build_configs[x] + ' agent is failed.')
+                    print(project + ' project not found. Please verify the project key.')
                     return False
-
-                if self.build_configs[x] == self.build_configs[-1]:
-                    return True
-
-            else:
-                print(project + ' project not found. Please verify the project key.')
-                return False
 
     def get_plan_key(self, url, base_64_user_pass, build_configs):
         url += '?expand=plans'
