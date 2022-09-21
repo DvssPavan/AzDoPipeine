@@ -63,7 +63,7 @@ class FTPlans:
         bamboo = Bamboo(url=bamboo_url, username=self.atlassian_user, password=self.atlassian_password)
 
         for x in range(len(self.build_configs)):
-            if((self.project[x] == "BULDOMEM" and !self.isExcludeCompilation) or (self.project[x] == "TSTFOMEM")) :
+            if((self.projects[x] == "BULDOMEM" and not self.isExcludeCompilation) or (self.projects[x] == "TSTFOMEM")) :
                 project = self.projects[x]
                 url = self.get_project_url(base_64_val, project)
                 print(url)
@@ -259,9 +259,8 @@ class FTPlans:
             field = ""
             summary = ""
             final_summary = ""
+            all_summary = open(filename, "w+")
             if fn.endswith("set_summary.csv"):
-
-                all_summary = open(filename, "w+")
 
                 with zip.open(fn, 'r') as infile:
                     csv_list = []
