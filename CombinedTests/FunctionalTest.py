@@ -63,7 +63,7 @@ class FTPlans:
         bamboo = Bamboo(url=bamboo_url, username=self.atlassian_user, password=self.atlassian_password)
 
         for x in range(len(self.build_configs)):
-            if(self.project[x] == "BULDOMEM" and !self.isExcludeCompilation) :
+            if((self.project[x] == "BULDOMEM" and !self.isExcludeCompilation) or (self.project[x] == "TSTFOMEM")) :
                 project = self.projects[x]
                 url = self.get_project_url(base_64_val, project)
                 print(url)
