@@ -1,4 +1,23 @@
 {
+    "inBambooConfigs": {
+        "inProjectKey":["TSTFOMEM"],
+        "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.44.1050",
+        "inSENLabel":"SimbaEngineSDK_10.1.24.1196",
+        "inDriverBrand":"Simba",
+        "inBooster_Label":"",
+        "inDisableParentMatch": "",
+        "inMemoryTest": "",
+        "inRetail": "",
+        "inAppVerifier": "",
+        "inTestSuiteList": "",
+        "inBuildConfigs": ["w2012r2 x64 64"],
+        "inBranchName": "Eloqua 1.6",
+        "inCompiler": "vs2015",
+        "inInsightDesktopLabel": "",
+        "inInsightBranch": ""
+    },
+    "ExcludeCompilation": true,
     "inCodeSigningConfigs": {
         "inProjectKey":"SGPOOMEM",
         "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
