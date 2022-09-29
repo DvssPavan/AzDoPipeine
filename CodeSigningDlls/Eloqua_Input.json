@@ -1,5 +1,5 @@
 {
-    "inBambooConfigs": {
+    "inCodeSigningConfigs": {
         "inProjectKey":"SGPOOMEM",
         "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
         "inCoreLabel":"Memphis_Core_ODBC_1.6.44.1050",
