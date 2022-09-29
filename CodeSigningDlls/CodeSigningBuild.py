@@ -1,16 +1,13 @@
 # Memphis Bamboo Build Plans for Code Signing DLLs/EXEs/Installers 1.0
 # Author: rkundeti
 """This module is responsible for triggering bamboo build plans for Code Signing.
-
 This triggers the bamboo build plan for Code Signing DLLs/EXEs/Installers.
-
   Typical usage example:
   $ python MemphisBambooBuild.py $(Username) $(password)
   
   Here, Username and password are your Bigsight Credentials.
   Note: - The bigsight credentials should belong to the user who has the permission
           to start a Signed Installer Plan (Example: - LinkedIn ODBC IBM release package)
-
   And follow the on-screen instructions.
 """
 import json
@@ -32,21 +29,21 @@ class BambooBuildPlans:
 
     def __init__(self, input_args: dict):
         self.input_args = input_args
-        self.project = input_args['inBambooConfigs']['inProjectKey']
-        self.driver_label = input_args['inBambooConfigs']['inDriverLabel']
-        self.core_label = input_args['inBambooConfigs']['inCoreLabel']
-        self.sen_label = input_args['inBambooConfigs']['inSENLabel']
-        self.driver_brand = input_args['inBambooConfigs']['inDriverBrand']
-        self.windows_build_configs = input_args['inBambooConfigs']['inBuildConfigs']['Windows']['inPlatform'] + " " + \
-                                     input_args['inBambooConfigs']['inBuildConfigs']['Windows']['inCompiler'] + " " + \
-                                     input_args['inBambooConfigs']['inBuildConfigs']['Windows']['inConfiguration']
-        self.linux_build_configs = input_args['inBambooConfigs']['inBuildConfigs']['Linux']['inPlatform'] + " " + \
-                                   input_args['inBambooConfigs']['inBuildConfigs']['Linux']['inCompiler'] + " " + \
-                                   input_args['inBambooConfigs']['inBuildConfigs']['Linux']['inConfiguration']
-        self.osx_build_configs = input_args['inBambooConfigs']['inBuildConfigs']['OSX']['inPlatform'] + " " + \
-                                 input_args['inBambooConfigs']['inBuildConfigs']['OSX']['inCompiler'] + " " + \
-                                 input_args['inBambooConfigs']['inBuildConfigs']['OSX']['inConfiguration']
-        self.branch_name = input_args['inBambooConfigs']['inBranchName']
+        self.project = input_args['inCodeSigningConfigs']['inProjectKey']
+        self.driver_label = input_args['inCodeSigningConfigs']['inDriverLabel']
+        self.core_label = input_args['inCodeSigningConfigs']['inCoreLabel']
+        self.sen_label = input_args['inCodeSigningConfigs']['inSENLabel']
+        self.driver_brand = input_args['inCodeSigningConfigs']['inDriverBrand']
+        self.windows_build_configs = input_args['inCodeSigningConfigs']['inBuildConfigs']['Windows']['inPlatform'] + " " + \
+                                     input_args['inCodeSigningConfigs']['inBuildConfigs']['Windows']['inCompiler'] + " " + \
+                                     input_args['inCodeSigningConfigs']['inBuildConfigs']['Windows']['inConfiguration']
+        self.linux_build_configs = input_args['inCodeSigningConfigs']['inBuildConfigs']['Linux']['inPlatform'] + " " + \
+                                   input_args['inCodeSigningConfigs']['inBuildConfigs']['Linux']['inCompiler'] + " " + \
+                                   input_args['inCodeSigningConfigs']['inBuildConfigs']['Linux']['inConfiguration']
+        self.osx_build_configs = input_args['inCodeSigningConfigs']['inBuildConfigs']['OSX']['inPlatform'] + " " + \
+                                 input_args['inCodeSigningConfigs']['inBuildConfigs']['OSX']['inCompiler'] + " " + \
+                                 input_args['inCodeSigningConfigs']['inBuildConfigs']['OSX']['inConfiguration']
+        self.branch_name = input_args['inCodeSigningConfigs']['inBranchName']
 
     """Triggers the Code Signing Plan"""
     def build(self):
