@@ -1,6 +1,6 @@
 {
     "inBambooConfigs": {
-        "inProjectKey":["TSTFOMEM"],
+        "inProjectKey":["BULDOMEM","TSTFOMEM"],
         "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
         "inCoreLabel":"Memphis_Core_ODBC_1.6.44.1050",
         "inSENLabel":"SimbaEngineSDK_10.1.24.1196",
@@ -11,7 +11,7 @@
         "inRetail": "",
         "inAppVerifier": "",
         "inTestSuiteList": "",
-        "inBuildConfigs": ["w2012r2 x64 64"],
+        "inBuildConfigs": ["w2012r2 vs2015 64", "w2012r2 x64 64"],
         "inBranchName": "Eloqua 1.6",
         "inCompiler": "vs2015",
         "inInsightDesktopLabel": "",
