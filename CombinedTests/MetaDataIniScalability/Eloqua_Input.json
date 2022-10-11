@@ -1,16 +1,20 @@
 {
     "RemoteMachineAddress": "van-wnt-vm.simba.ad",
+    "DriverLabel" : "Eloqua_ODBC_1.6.44.1019",
+    "CoreLabel": "Memphis_Core_ODBC_1.6.44.1050",
+    "SENLabel" : "SimbaEngineSDK_10.1.24.1196",
+    "DriverName" : "Eloqua",
     "Core": {
-        "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Core_w2012r2_vs2015_64.zip",
-        "DestPath": "C:\\Memphis_ODBC\\Core_1.6.44.1050",
+        "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\{{Core_Label}}_SEN_{{SEN_Label}}\\Core_w2012r2_vs2015_64.zip",
+        "DestPath": "C:\\Memphis_ODBC\\{{Core_Label}}",
         "ForceUpdate": true,
         "Branch": "Maintenance\\1.6"
     },
     "Plugin": {
         "Compile": [
             {
-                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\\Eloqua\\1.6\\compile\\Eloqua_ODBC_1.6.44.1019_CORE_Memphis_Core_ODBC_1.6.44.1050_SEN_SimbaEngineSDK_10.1.24.1196\\Eloqua_w2012r2_vs2015_64.zip",
-                "DestPath": "C:\\Memphis_ODBC\\Eloqua\\Eloqua_ODBC_1.6.44.1019_64Bit",
+                "SourcePath": "Y:\\Drivers\\MemphisODBC\\DataSources\\{{Driver_Name}}\\1.6\\compile\\{{Driver_Label}}_CORE_{{Core_Label}}_SEN_{{SEN_Label}}\\{{Driver_Name}}_w2012r2_vs2015_64.zip",
+                "DestPath": "C:\\Memphis_ODBC\\{{Driver_Name}}\\{{Driver_Label}}_64Bit",
                 "ForceUpdate": false,
                 "Brand": "Microsoft",
                 "WaitForUserToSetupDSN": false,
