@@ -88,7 +88,7 @@ class InputReader:
                 self.__mDesPath.replace('{{Core_Label}}',self.__mCoreLabel)
             if '{{SEN_Label}}' in self.__mDesPath:
                 self.__mDesPath.replace('{{SEN_Label}}',self.__mSENLabel)
-            f '{{Driver_Name}}' in self.__mDesPath:
+            if '{{Driver_Name}}' in self.__mDesPath:
                 self.__mDesPath.replace('{{Driver_Name}}',self.__mDriverName)
             
             self.__mCoreInfo = Core(self.__mSourcePath,
