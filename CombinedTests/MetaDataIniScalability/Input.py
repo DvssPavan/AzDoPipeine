@@ -75,21 +75,21 @@ class InputReader:
             self.__mSourcePath = inInputFile[InputReader.Core][InputReader.SourcePath]
             self.__mDesPath  = inInputFile[InputReader.Core][InputReader.DestPath]
             if '{{Driver_Label}}' in self.__mSourcePath:
-                self.__mSourcePath.replace('{{Driver_Label}}',self.__mDriverLabel)
+                self.__mSourcePath=self.__mSourcePath.replace('{{Driver_Label}}',self.__mDriverLabel)
             if '{{Core_Label}}' in self.__mSourcePath:
-                self.__mSourcePath.replace('{{Core_Label}}',self.__mCoreLabel)
+                self.__mSourcePath=self.__mSourcePath.replace('{{Core_Label}}',self.__mCoreLabel)
             if '{{SEN_Label}}' in self.__mSourcePath:
-                self.__mSourcePath.replace('{{SEN_Label}}',self.__mSENLabel)
+                self.__mSourcePath=self.__mSourcePath.replace('{{SEN_Label}}',self.__mSENLabel)
             if '{{Driver_Name}}' in self.__mSourcePath:
-                self.__mSourcePath.replace('{{Driver_Name}}',self.__mDriverName)
+                self.__mSourcePath=self.__mSourcePath.replace('{{Driver_Name}}',self.__mDriverName)
             if '{{Driver_Label}}' in self.__mDesPath:
-                self.__mDesPath.replace('{{Driver_Label}}',self.__mDriverLabel)
+                self.__mDesPath=self.__mDesPath.replace('{{Driver_Label}}',self.__mDriverLabel)
             if '{{Core_Label}}' in self.__mDesPath:
-                self.__mDesPath.replace('{{Core_Label}}',self.__mCoreLabel)
+                self.__mDesPath=self.__mDesPath.replace('{{Core_Label}}',self.__mCoreLabel)
             if '{{SEN_Label}}' in self.__mDesPath:
-                self.__mDesPath.replace('{{SEN_Label}}',self.__mSENLabel)
+                self.__mDesPath=self.__mDesPath.replace('{{SEN_Label}}',self.__mSENLabel)
             if '{{Driver_Name}}' in self.__mDesPath:
-                self.__mDesPath.replace('{{Driver_Name}}',self.__mDriverName)
+                self.__mDesPath=self.__mDesPath.replace('{{Driver_Name}}',self.__mDriverName)
             
             self.__mCoreInfo = Core(self.__mSourcePath,
                                     self.__mDesPath,
@@ -104,7 +104,7 @@ class InputReader:
             for pluginInfo in inInputFile[InputReader.Plugin][InputReader.Compile]:
                 try:
                     self.__mPluginInfo.append(
-                        Plugin(pluginInfo[InputReader.SourcePath], pluginInfo[InputReader.DestPath],
+                        Plugin(self.__mSourcePath, self.__mDesPath,
                                pluginInfo[InputReader.Brand], pluginInfo[InputReader.DataSourceConfiguration],
                                pluginInfo[InputReader.WaitForUserToSetupDSN], pluginInfo[InputReader.ForceUpdate])
                     )
