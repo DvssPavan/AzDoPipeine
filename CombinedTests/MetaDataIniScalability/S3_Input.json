@@ -1,9 +1,9 @@
 {
     "RemoteMachineAddress": "van-wnt-vm.simba.ad",
-    "DriverLabel" : "Eloqua_ODBC_1.6.44.1019",
-    "CoreLabel": "Memphis_Core_ODBC_1.6.44.1050",
+    "DriverLabel" : "AmazonS3_ODBC_1.6.45.1020",
+    "CoreLabel": "Memphis_Core_ODBC_1.6.45.1053",
     "SENLabel" : "SimbaEngineSDK_10.1.24.1196",
-    "DriverName" : "Eloqua",
+    "DriverName" : "S3",
     "Core": {
         "SourcePath": "Y:\\Drivers\\MemphisODBC\\Core\\1.6\\compile\\{{Core_Label}}_SEN_{{SEN_Label}}\\Core_w2012r2_vs2015_64.zip",
         "DestPath": "C:\\Memphis_ODBC\\{{Core_Label}}",
@@ -19,14 +19,13 @@
                 "Brand": "Microsoft",
                 "WaitForUserToSetupDSN": false,
                 "DataSourceConfiguration": {
-                    "Description": "Microsoft ELoqua DSN",
-                    "Driver": "Microsoft Eloqua ODBC Driver",
-                    "Auth_Type": "Basic",
-                    "UID" : "TechnologyPartnerSimbaTechnologiesInc\\Jerry.Toledo",
-                    "ENCPWD" : "4CCB730023D95DEC47923DC02BCABF19",
-                    "EncAccessToken": "",
-                    "EncClientSecret": "",
-                    "Host": "secure.p02.eloqua.com",
+                    "Description": "Microsoft Amazon S3 DSN",
+                    "Driver": "Microsoft Amazon S3 ODBC Driver",
+                    "Auth_Type": "AWS",
+                    "AccessKey" : "AKIA3ALJSDWDZD3ZFBOZ",
+                    "ENCSECRETKEY" : "CC010514AEA9BD278F081D6A614B611F4650B21F63DFF560D0BFBBC115B4F79DF91457C703D2FB16CB7DC90AC4B1011A",
+                    "Auth_Client_ID": "AKIA3ALJSDWDZD3ZFBOZ",
+                    "Host": "s3.amazonaws.com",
                     "UseWindowsProxySettings": "0",
                     "EnableDoubleBuffer": "1",
                     "UseHostVerification": "0",
@@ -34,7 +33,6 @@
                     "Auth_Expires": "",
                     "DSNSETUP": "1",
                     "ENABLESESSIONTOKEN": "0",
-                    "ENCREFRESHTOKEN": "",
                     "USEEC2INST": "0",
                     "UseEncryptedEndpoints": "1"
                 }
