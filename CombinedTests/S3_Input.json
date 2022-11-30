@@ -1,1 +1,21 @@
-
+{
+    "inBambooConfigs": {
+        "inProjectKey":["BULDOMEM","TSTFOMEM"],
+        "inDriverLabel":"AmazonS3_ODBC_1.6.45.1020",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.45.1053",
+        "inSENLabel":"SimbaEngineSDK_10.1.24.1196",
+        "inDriverBrand":"Simba",
+        "inBooster_Label":"",
+        "inDisableParentMatch": "",
+        "inMemoryTest": "",
+        "inRetail": "",
+        "inAppVerifier": "",
+        "inTestSuiteList": "",
+        "inBuildConfigs": ["w2012r2 vs2015 64","w2012r2 x64 64"],
+        "inBranchName": "S3 1.6",
+        "inCompiler": "vs2015",
+        "inInsightDesktopLabel": "",
+        "inInsightBranch": ""
+    },
+    "ExcludeCompilation": false
+}
