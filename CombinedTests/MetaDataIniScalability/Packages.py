@@ -200,7 +200,7 @@ class Plugin(Package):
             extractedCorePath = inCoreInfo.getDestinationPath()
             print(extractedCorePath)
             pluginFileName = self.getFileName()
-            extractedPluginPath=os.path.join(extractedPluginPath, pluginFileName[:len(pluginFileName)-4])
+            #extractedPluginPath=os.path.join(extractedPluginPath, pluginFileName[:len(pluginFileName)-4])
             self.setDestinationPath(extractedPluginPath)
             print("Extracted Plugin Path "+extractedPluginPath)
             pluginLibFolderPath = os.path.join(extractedPluginPath, 'lib')
