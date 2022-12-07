@@ -174,6 +174,9 @@ def main(inUserName: str, inPassword: str, inBasePath: str, inputFileName: str):
                                                                       f"{pluginInfo.getPackageName()}_"
                                                                       f"MetaTesterLogs.txt")
                     MetaTesterPath = os.path.join(inBasePath, MetaTester.MetaTesterDirName)
+                    print('MetaTesterPath' +MetaTesterPath)
+                    print(pluginInfo.getDataSourceName())
+                    print(pluginInfo.getPackageBitCount())
                     metaTesterLogs = MetaTester.run(pluginInfo.getDataSourceName(), pluginInfo.getPackageBitCount(),
                                                     MetaTesterPath)
                     if isNoneOrEmpty(metaTesterLogs):
