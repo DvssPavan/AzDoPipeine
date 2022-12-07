@@ -193,6 +193,7 @@ class Plugin(Package):
         if self.download() and inCoreInfo.download():
             brand = self.getPluginBrand()
             extractedPluginPath = self.getDestinationPath()
+            print('extracted plugin path'+extractedPluginPath)
             driverName = self.getPackageName()
 
             coreBranch = inCoreInfo.getBranch()
