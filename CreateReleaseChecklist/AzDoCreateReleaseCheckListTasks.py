@@ -37,7 +37,7 @@ class JiraOperations:
         
     def createReleaseCheckList(self,drivername,versionNumber,customer):
         jira=JIRA(options=self.jiraOptions,basic_auth=(self.username,self.password))
-        issue_values={'project':{'id': self.projectId}, 'summary': drivername + versionNumber + 'ODBC' + customer + 'Release','issuetype': {'id' : '7' }}
+        issue_values={'project':{'id': self.projectId}, 'summary': drivername  +' ' +versionNumber +' '+ 'ODBC' +' ' + customer + ' Release','issuetype': {'id' : self.parentId }}
         parentIssue=jira.create_issue(fields=issue_values)
         print(parentIssue)
         for eachSummary in self.summary:
