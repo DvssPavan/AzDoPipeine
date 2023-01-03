@@ -1,8 +1,8 @@
 {
     "inBambooConfigs": {
         "inProjectKey":["BULDOMEM","TSTFOMEM"],
-        "inDriverLabel":"Eloqua_ODBC_1.6.44.1019",
-        "inCoreLabel":"Memphis_Core_ODBC_1.6.44.1050",
+        "inDriverLabel":"Eloqua_ODBC_1.6.45.1022",
+        "inCoreLabel":"Memphis_Core_ODBC_1.6.45.1053",
         "inSENLabel":"SimbaEngineSDK_10.1.24.1196",
         "inDriverBrand":"Simba",
         "inBooster_Label":"",
@@ -17,5 +17,5 @@
         "inInsightDesktopLabel": "",
         "inInsightBranch": ""
     },
-    "ExcludeCompilation": true
+    "ExcludeCompilation": false
 }
