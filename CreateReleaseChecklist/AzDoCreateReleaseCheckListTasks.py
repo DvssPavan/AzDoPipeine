@@ -23,8 +23,8 @@ for eachSummary in summary:
     print(issue)"""
     
 class JiraOperations:
-    projectId="13201"
-    parentId="225420"
+    projectId="13378"
+    parentId="10100"
     summary=['AzDo - Merge Plugin Changes from Trunk to branch','AzDo - Create Label For Plugin','Raise DOC Task','AzDo - Signing', 'AzDo - Binscope','AzDo - MetaData Tester', 'AzDo - Private Driver Loading','AzDo - Proxy Server Test',
     'AzDo - Functional Test','AzDo - Scalabitlity Tests','AzDo - Private Driver Loading','AzDo - PowerBI', 'AzDo - Tableau', 'AzDo - Branding Verification and SQL Browse Connect',
     'AzDo - ETW Logger', 'AzDo - Secure CRT Function check', 'AzDo - Integration Test Suite', 'AzDo - Ini Tests','AzDo - Package Testing']
@@ -33,7 +33,7 @@ class JiraOperations:
     def __init__(self,username,password):
         self.username=username
         self.password=password
-        self.jiraOptions={'server': "https://jira.magsw.com",'verify':False}
+        self.jiraOptions={'server': "https://insightsoftware.atlassian.net",'verify':False}
         
     def createReleaseCheckList(self,drivername,versionNumber,customer):
         jira=JIRA(options=self.jiraOptions,basic_auth=(self.username,self.password))
@@ -41,7 +41,7 @@ class JiraOperations:
         parentIssue=jira.create_issue(fields=issue_values)
         print(parentIssue)
         for eachSummary in self.summary:
-            issue_values={'project':{'id': self.projectId}, 'summary':eachSummary,'issuetype': {'id' : '5' },'parent': {'id': parentIssue.id }}
+            issue_values={"project":{"id":self.projectId},"issuetype":{"id":"10010"},"summary":eachSummary,"parent":{"id":parentIssue.id}}
             issue=jira.create_issue(fields=issue_values)
             print(issue)
         
