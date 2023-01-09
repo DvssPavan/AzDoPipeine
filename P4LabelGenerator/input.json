@@ -2,13 +2,9 @@
     "dependencies":{
         "common": {
             "//Drivers/Memphis/Tools/...": ["head"],
-            "//Drivers/DriverShared/DriverSupport/Maintenance/10.1/...": ["head"],
-            "//Drivers/DriverShared/SENPluginToolkit/Maintenance/10.1/...": ["head"],
-            "//Drivers/DriverShared/ViewSupport/Maintenance/10.1/...": ["head"],
             "//SimbaShared/Licensing/...": ["{SENLBL}"],
             "//SimbaShared/Step/...": ["{SENLBL}"],
             "//SimbaShared/Tools/...": ["{SENLBL}"],
-            "//Drivers/DriverShared/DriverOAuthSupport/Maintenance/10.1/...": ["head"],
             "//ThirdParty/Expat/2.4.6/...": ["head"],
             "//ThirdParty/icu/58.3.x/...": ["head"],
             "//ThirdParty/libcURL/7.84.0_ssl1.1.1_zlib-static1.2.11_threaded_resolver/...": ["head"],
@@ -23,9 +19,17 @@
         },
         "core": {
             "//Drivers/Memphis/Core/Maintenance/1.6/...": ["head"],
-            "//Drivers/Memphis/Core/Trunk/Main/...": ["head"]
+            "//Drivers/Memphis/Core/Trunk/Main/...": ["head"],
+            "//Drivers/DriverShared/DriverSupport/Maintenance/10.1/...": ["head"],
+            "//Drivers/DriverShared/SENPluginToolkit/Maintenance/10.1/...": ["head"],
+            "//Drivers/DriverShared/ViewSupport/Maintenance/10.1/...": ["head"], 
+            "//Drivers/DriverShared/DriverOAuthSupport/Maintenance/10.1/...": ["head"]
         },
         "plugin": {
+            "//Drivers/DriverShared/DriverSupport/Maintenance/10.1/...": ["{CORELBL}"],
+            "//Drivers/DriverShared/SENPluginToolkit/Maintenance/10.1/...": ["{CORELBL}"],
+            "//Drivers/DriverShared/ViewSupport/Maintenance/10.1/...": ["{CORELBL}"],   
+            "//Drivers/DriverShared/DriverOAuthSupport/Maintenance/10.1/...": ["{CORELBL}"],
             "//Drivers/Memphis/Core/Maintenance/1.6/...": ["{CORELBL}"],
             "//Drivers/Memphis/Core/Trunk/Main/...": ["{CORELBL}"],
             "//SimbaShared/ImportDependencies/Maintenance/1.0/...": ["head"],
